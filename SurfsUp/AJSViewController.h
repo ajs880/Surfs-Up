@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AJSViewController : UIViewController
+- (IBAction)handlePan:(UIPanGestureRecognizer *)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *surferDudeImage;
 
 @end

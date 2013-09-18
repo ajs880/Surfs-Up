@@ -26,4 +26,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)handlePan:(UIPanGestureRecognizer *)sender {
+
+    UIGestureRecognizerState state = sender.state;
+    
+    CGPoint translation = [sender translationInView:self.view];
+    
+    NSLog(@"%f %f", translation.x, translation.y);
+    
+    if (state == UIGestureRecognizerStateBegan)
+    {
+        self.surferDudeImage.center = CGPointMake(sender.view.center.x, sender.view.center.y);
+        
+        else if (state == UIGestureRecognizerStateChanged) {
+    }
+    
+    NSLog(@"handlePan");
+}
 @end
